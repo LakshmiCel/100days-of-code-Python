@@ -42,10 +42,11 @@ def ask_size():
             ask_size()
         size = int(size_input)
 ask_size()
-   
-print(size)
+
+# Easy level where the passwd will have random sequence   
 for step in range(1, size + 1):
     password += random.choice(lowercase_letters + uppercase_letters + digits + punctuations)
 print("Your password is ready:", password)
     
+
 
