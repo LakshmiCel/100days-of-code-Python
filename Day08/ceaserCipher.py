@@ -3,7 +3,7 @@ for letter in range(ord('A'), ord('Z') + 1):
     # print(chr(letter))
     alphabets.append(chr(letter).lower())
 proceed = 'start'
-print("Welcome to ceaser cipher", "The process of encrypting the messages and decrypting them", "to make unintended person understanding the intent of the message", sep ="\n")
+print("Welcome to ceaser cipher. The process of encrypting and decrypting messages, to make an unintended person not aware about the intent of the message")
 while(proceed in ('start', 'y')):
     def ask_proceed():
         proceed = input("\nEnter `y` to proceed or `n` to exit").strip().lower()
