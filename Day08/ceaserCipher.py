@@ -1,6 +1,6 @@
 alphabets = []
 for letter in range(ord('A'), ord('Z') + 1):
-    # print(chr(letter))
+    print(chr(letter))
     alphabets.append(chr(letter).lower())
 proceed = 'start'
 print("Welcome to ceaser cipher. The process of encrypting and decrypting messages, to make an unintended person not aware about the intent of the message")
@@ -21,13 +21,13 @@ while(proceed in ('start', 'y')):
             if (action == 'encrypt'):
                 # print(each_letter in alphabets, each_letter)
                 if each_letter in alphabets:
-                    index = (alphabets.index(each_letter) + turns)
-                    order_value = 26 - index if(index >= 26) else index
+                    index = (alphabets.index(each_letter) + turns)%26
+                    # order_value = 26 - index if(index >= 26) else index
                     # print(index, order_value)
-                    print(alphabets[order_value], end="")
+                    print(alphabets[index], end="")
             elif (action == 'decrypt'):
                 if each_letter in alphabets:
-                    index = (alphabets.index(each_letter) - turns)
+                    index = (alphabets.index(each_letter) - turns) % 26
                     order_value = 26 + index if(index < 0) else index
                     # print(index, order_value)
                     print(alphabets[order_value], end="")
